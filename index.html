@@ -1,574 +1,91 @@
-<!-- <!DOCTYPE html> -->
-<!-- <html> -->
+<!DOCTYPE html>
+<html>
+
 <head>
-  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-         rel = "stylesheet">
-      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 
-      <!-- <script src = "https://code.jquery.com/jquery-1.10.2.js"></script> -->
-      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-      <script src="./resources/jquery.connections.js"></script>
-   
-      <!-- Javascript -->
-      <script>
-        $(function() {
-
-        	$(".step3-button").click(function(){
-
-        		$("#step4").css("display", "block");
-        		$("#step4 > button").css("display", "inline-block");
-
-        		$("#step3").css("display", "none");
-        		$("#step3 > button").css("display", "none");
-
-        		$(".rela").css("visibility", "visible");
-
-	 			$("#renee").connections(
-	        		{ 
-	        			to: "#wayne"
-	        		});
-
-	        	$("#delaney").connections(
-	        		{ 
-	        			to: "#aunt"
-	        		});
-	        	
-	        	$("#pang").connections(
-	        		{ 
-	        			to: "#gmp",
-	        		});
-
-	        	$("#pang").connections(
-	        		{ 
-	        			to: "#gpp"
-	        		});
-
-	        	$("#pang").connections(
-	        		{ 
-	        			to: "#wayne"
-	        		});
-
-	        	$("#pat").connections(
-	        		{ 
-	        			to: "#gmm",
-	        		});
-
-	        	$("#pat").connections(
-	        		{ 
-	        			to: "#gpm"
-	        		});
-	        	$("#pat").connections(
-	        		{
-	        			to: "#aunt"
-	        		});
-
-
-        	});
-
-        	$(".step5-button").click(function(){
-        		$("#step6").css("display", "block");
-        		$("#step6 > button").css("display", "inline-block");
-
-        		$("#step5").css("display", "none");
-        		$("#step5 > button").css("display", "none");
-
-        		$("img").css("display", "none");
-        		$(".tree-wrapper").css("display","none");
-        		$("#thoughts").css("display", "block");
-        	});
-
-        	$(".step6-button").click(function(){
-        		location.reload();
-        	});
-
-        	$(".step4-button").click(function(){
-
-        		$("#step5").css("display", "block");
-
-        		$("#step5 > button").css("display", "inline-block");
-
-        		$("#step4").css("display", "none");
-        		$("#step4 > button").css("display", "none");
-
-        		// clear the canvas
-        		// $("img").css("display", "none");
-        		$("img").connections('remove');
-
-        		$("#template").css(
-        			{
-        				"display": "block",
-        				"left": "350px",
-        				"height": "700px",
-        				"width": "700px",
-        				"object-fit": "fill"
-        			});
-
-        		$("#gmm").css("left", "570px");
-        		$("#gmm").css("top", "250px");
-
-        		$("#gpm").css("left", "570px");
-        		$("#gpm").css("top", "350px");
-
-        		$("#gmp").css("left", "730px");
-        		$("#gmp").css("top", "250px");
-
-        		$("#gpp").css("left", "730px");
-        		$("#gpp").css("top", "350px");
-
-        		$("#dad").css("left", "770px");
-        		$("#dad").css("top", "50px");
-
-        		$("#mom").css("left", "850px");
-        		$("#mom").css("top", "140px");
-
-        		$("#pang").css("left", "890px");
-        		$("#pang").css("top", "440px");
-
-        		$("#wayne").css("left", "830px");
-        		$("#wayne").css("top", "530px");
-
-        		$("#pat").css("left", "445px");
-        		$("#pat").css("top", "150px");
-
-        		$("#aunt").css("left", "420px");
-        		$("#aunt").css("top", "240px");
-
-        		$("#me").css("left", "980px");
-        		$("#me").css("top", "50px");
-
-        		$("#cece").css("left", "1030px");
-        		$("#cece").css("top", "160px");
-
-        		$("#delaney").css("left", "330px");
-        		$("#delaney").css("top", "50px");
-
-        		$(".rela2").css("display", "block");
-        		$("#ada").css("left", "260px");
-        		$("#ada").css("top", "160px");
-
-        		$("#dan").css("left", "240px");
-        		$("#dan").css("top", "260px");
-
-        		$("#angie").css("left", "1040px");
-        		$("#angie").css("top", "480px");
-
-        		$("#renee").css("left", "1000px");
-        		$("#renee").css("top", "590px");
-
-        		$("#tony").css("left", "250px");
-        		$("#tony").css("top", "360px");
-
-
-        	});
-
-        	$(".step1-button").click(function(){
-
-        		// alert("step 1 advanced");
-
-        		$("#step2").css("display", "block");
-        		$("#step2 > button").css("display", "inline-block");
-
-        		$("#step1").css("display", "none");
-        		$("#step1 > button").css("display", "none");
-
-        		$(".tree-wrapper").css("position", "static");
-        		$("img").css(
-        		{
-        			"visibility": "visible",
-        			"position": "static",
-        			"margin": "3px"
-        		});
-
-        	});
-
-        	// the togglable buttons 
-        	$(".step2-button").click(function(){
-        		$(".rela").css("visibility", "hidden");
-
-        		$("#step3").css("display", "block");
-        		$("#step3 > button").css("display", "inline-block");
-
-        		$("#step2").css("display", "none");
-        		$("#step2 > button").css("display", "none");
-
-
-        		$(".tree-wrapper").css("position", "relative");
-        		$("img").css("position", "absolute");
-
-        	$("#me").css("top", "85%");
-        	$("#me").css("left", "40%");
-
-        	$("#cece").css("top", "85%");
-        	$("#cece").css("left", "50%");
-
-        	$("#renee").css("top", "85%");
-        	$("#renee").css("left", "12%");
-
-        	$("#delaney").css("top", "85%");
-        	$("#delaney").css("left", "85%");
-
-        	$("#mom").css("left", "60%");
-        	$("#mom").css("top", "45%");
-        	$("#dad").css("left", "30%");
-        	$("#dad").css("top", "45%");
-
-        	$("#pang").css("top", "45%");
-        	$("#pang").css("left", "18%");
-
-            $("#wayne").css("top", "45%");
-        	$("#wayne").css("left", "2%");	
-
-        	$("#pat").css("top", "45%");
-        	$("#pat").css("left", "75%");
-
-        	$("#aunt").css("top", "45%");
-        	$("#aunt").css("left", "92%");        	
-
-        	$("#gmm").css("top", "10%");
-        	$("#gmm").css("left", "55%");
-        	$("#gpm").css("top", "10%");
-        	$("#gpm").css("left", "80%");
-
-        	$("#gmp").css("top", "10%");
-        	$("#gmp").css("left", "10%");
-        	$("#gpp").css("top", "10%");
-        	$("#gpp").css("left", "35%");
-
-        	$("#mom").connections(
-        		{ 
-        			to: "#gmm"
-        		});
-
-        	$("#mom").connections(
-        		{ 
-        			to: "#gpm"
-        		});
-
-        	$("#dad").connections(
-        		{ 
-        			to: "#gmp"
-        		});
-
-        	$("#dad").connections(
-        		{ 
-        			to: "#gpp"
-        		});
-        	// $("#renee").connections(
-        	// 	{ 
-        	// 		to: "#wayne"
-        	// 	});
-
-        	// $("#delaney").connections(
-        	// 	{ 
-        	// 		to: "#aunt"
-        	// 	});
-
-        	// $("#pang").connections(
-        	// 	{ 
-        	// 		to: "#gmp",
-        	// 	});
-
-        	// $("#pang").connections(
-        	// 	{ 
-        	// 		to: "#gpp"
-        	// 	});
-
-        	// $("#pang").connections(
-        	// 	{ 
-        	// 		to: "#wayne"
-        	// 	});
-
-        	// $("#pat").connections(
-        	// 	{ 
-        	// 		to: "#gmm",
-        	// 	});
-
-        	// $("#pat").connections(
-        	// 	{ 
-        	// 		to: "#gpm"
-        	// 	});
-        	// $("#pat").connections(
-        	// 	{
-        	// 		to: "#aunt"
-        	// 	});
-
-
-        	$("#me").connections(
-        		{ 
-        			to: "#mom"
-        		});
-        	$("#me").connections(
-        		{ 
-        			to: "#dad"
-        		});
-
-        	$("#cece").connections(
-        		{ 
-        			to: "#mom"
-        		});
-
-        	$("#cece").connections(
-        		{ 
-        			to: "#dad"
-        		});
-
-
-
-        	});
-
-        	
-
-            $("#ada").tooltip({
-            	content: function() {
-            		return "Ada D. Ding (cousin) \n swimming, powerlifting, reading novels ";
-            	}
-            });
-
-            $("#angie").tooltip({
-            	content: function() {
-            		return "Angelina Le (cousin) \n soccer, swimming, math";
-            	}
-            });
-
-            $("#aunt").tooltip({
-            	content: function() {
-            		return "Weixin Xu (aunt) \n knitting, jogging, reading ";
-            	}
-            });
-
-            $("#cece").tooltip({
-            	content: function() {
-            		return "Cecilia Yao (sister) \n violin, indie music, picnics";
-            	}
-            });
-
-            $("#dad").tooltip({
-            	content: function() {
-            		return "Weijun Yao (dad) \n The game Go, cooking, talking about science";
-            	}
-            });
-
-            $("#delaney").tooltip({
-            	content: function() {
-            		return "Delaney Ding (cousin) \n choral singing, violin, biology";
-            	}
-            });
-
-            $("#gmm").tooltip({
-            	content: function() {
-            		return "Suxin Luan (grandma) \n reading books, calligraphy, making stew";
-            	}
-            });
-
-            $("#gmp").tooltip({
-            	content: function() {
-            		return "Yunyi Yao (grandma) \n morning jogs, calligraphy, engineering";
-            	}
-            });
-
-            $("#gpm").tooltip({
-            	content: function() {
-            		return "Xuewen Ding (grandpa) \n physics, soccer, swimming";
-            	}
-            });
-
-            $("#gpp").tooltip({
-            	content: function() {
-            		return "Xilin Xu (grandpa) \n calligraphy, writing, biking ";
-            	}
-            });
-
-            $("#me").tooltip({
-            	content: function() {
-            		return "William Yao (me!) \n violin, distance running, math ";
-            	}
-            });
-
-            $("#mom").tooltip({
-            	content: function() {
-            		return "Yanli Ding (mom) \n learning languages, sewing ";
-            	}
-            });
-            $("#pang").tooltip({
-            	content: function() {
-            		return "Panggu Xu (aunt) \n ping-pong, movies, chinese chess";
-            	}
-            });
-
-            $("#pat").tooltip({
-            	content: function() {
-            		return "Pat Ding (uncle) \n cooking, jogging, yoga";
-            	}
-            });
-
-            $("#renee").tooltip({
-            	content: function() {
-            		return "Renee Le (cousin) \n telling jokes, math, creative writing ";
-            	}
-            });
-
-            $("#wayne").tooltip({
-            	content: function() {
-            		return "Wayne Le (uncle) \n fine wines, sports cars, computer science";
-            	}
-            });
-
-		});
-
-
-      </script>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
 	<style type="text/css">
-	@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
-		.connection {
-			border: 4px solid gray;
-			border-radius: 5px;
-		}
+		@import url(//fonts.googleapis.com/css?family=Lato:400,700);
 		body {
-			background-color: #E7D8C9;
+			background-color: #afe8a7;
+			font-family: 'Lato', sans-serif;
 		}
-		.tree-wrapper {
-			/*border: 1px solid green;*/
-			margin: 80px 180px;
-			position: relative;
-			height: 80%;
-		}
-		.inst {
-			display: none;
-			font-size: 14pt;
-			font-family: "Spartan", sans-serif;
-		}
-		.inst > button{
-			display: none;
+		footer {
+			width: 100%;
 		}
 
-
-		.inst-wrapper {
-			border: 4px solid white;
-			margin: 20px 180px;
-			padding: 20px 120px;
-			height: 130px;
-		}
-
-		#thoughts {
-			margin: 20px 20%;
-			display: none;
-			font-family: "Spartan", sans-serif;
-		}
-
-		.ui-tooltip-content {
-			font-family: "Spartan", sans-serif;		}
-
-		.inst-btn {
-			font-family: "Spartan", sans-serif;
-			font-size: 14pt;
-			border: 1px solid purple;
-			border-radius: 4px;
-			transition: background-color 0.4s ease;
-			background-color: #E7D8C9;
-			/*border: none;*/
-		}
-
-		.inst-btn:hover {
-			cursor: pointer;
-			background: purple;
-		}
-
-		#step1 {
-			display: block;
-		}
-		#step1 > button {
-			display: inline-block;
-		}
-
-		.rela2 {
-			display: none;
-		}
-
-
-		img {
-			visibility: hidden;
-			position: absolute;
-			object-fit: cover;
-			width: 75px;
-			height: 75px;
-		}
-		img:hover {
-			opacity: 0.8;
-		}
-		#template:hover {
-			opacity: 1;
-		}
-		.ui-tooltip {
-		    white-space: pre-line;
-		}
-		.male {
-			border-radius: 0%;
-		}
-		.female {
+		.headshot {
+			width: 150px;
 			border-radius: 50%;
-		}
-		.maternal {
-			border: 3px solid lightblue;
-		}
-		.paternal {
-			border: 3px solid red;
-		}
-		.nuclear {
-			border: 3px solid purple;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 4%;
+
 		}
 
-		#template {
-			display: none;
+		@media (min-width: 600px) {
+		  .section {
+		    width: 100%;
+		  }
+
+		.section {
+			opacity: 1;
+			width: 40%;
 		}
 
-		#me {
-			visibility: visible;
-			left: 45%;
-			top: 5%;
+		.hi {
+			margin: 3% auto;
+		}
 
+		.thoughts {
+			margin: 3% auto;
+		}
+
+		.link {
+			margin: 5% auto;
+		}
+
+		.update {
+			margin: 0 auto;
+			text-align: center;
 		}
 
 	</style>
-
-	<title>Family Tree</title>
-
+	<title>willyao</title>
 </head>
 <body>
-	<div class="inst-wrapper">
-		<p id="step1" class="inst">Hey look, it's a picture of me. Pretty simple. The meaning of the purple border will become clear soon, but if you go ahead and hover over me, you can see a few of my interests. When you're ready to learn a bit more, click <button class="step1-button inst-btn"> here</button></p>
-		<p id="step2" class="inst">Wow, a bunch more faces. These are some of my family members of the past three generations. Some of these people might look a lot like me, and some of them less so. Not all of us are of similar age either. You can learn more about them by hovering over their faces. Move on by clicking <button class="step2-button inst-btn"> here</button></p>
-		<p id="step3" class="inst">Now this is a bit more informative! You can see the members of my nuclear family. You can notice how much my sister and I resemble one another. This particular tree marks Will and Cecilia as the focal points, where everyone gets narrowed down to us. Perhaps this would be a nice visualization to show where my DNA (or direct bloodline as we talked about in section) comes from. Move on by clicking <button class="step3-button inst-btn"> here</button></p>
-		<p id="step4" class="inst"> Now, the tree has a few more nodes and edges in it. Just by adding a few aunts/uncles and cousins, the message that the tree portrays is vastly different. Rather than it being very Will-centric, it beings to show expansive nature of the family. This highlights the idea that intentionally including or omitting entites from a tree or other visualization is an expression of priorities and what/who is important. Click <button class="step4-button inst-btn"> here</button></p>	
-		<p id="step5" class="inst">Let's take a step back and think about what we saw. We saw a hierarchical structure that showed how the generations progressed, and how I am interconnected with my relatives. However, could we visually organize the very same people in a totally different way, as shown below. Here we are emphasizing the growth of the Yao family over generations, each a larger concentric circle than the last. Click <button class="step5-button inst-btn"> here</button> for my complete thoughts. </p>
-		<p id="step6" class="inst">You can replay this entire sequence by clicking <button class="step6-button inst-btn">here</button>.</p>
+	<img class="headshot" src="assets/headshot.png" alt="Avatar">
+	<div class="hi section">
+		<h1>hi | &#20320;&#22909; | bonjour</h1>
+		<div>
+			<p>
+				i'm will yao, a student at harvard studying applied math and computer science. this semester i'm mostly thinking and learning about <a href="https://en.wikipedia.org/wiki/Programming_language_theory">pl theory</a>, <a href="https://en.wikipedia.org/wiki/Game_theory">game theory</a> and <a href="https://en.wikipedia.org/wiki/Machine_learning">ml</a>. i've spent summers working at some tech firms, <a href="https://www.loro.xyz/">small</a> and <a href="https://www.abinitio.com/en/">large</a>. i'm one of the technology chairs of the <a href="https://www.thecrimson.com/">harvard crimson</a>, where i help lead a variety of software projects to improve our website. i'm a native rhode islander, and i'm a lifelong <a href="https://www.brattlestreetchamberplayers.com/">violinist</a>. i'm interested in tech, education, law, music and whatever lies at the intersection of those things. 
+			</p>
+			<p>
+				my email is willia*m_yao@col*lege.harv*ard.edu (humans: ignore the asterisks)
+			</p>
+		
+		</div>
 	</div>
-	<div class="tree-wrapper">
-		<img id="ada" class="maternal female rela2" title="" src="./assets/ada.png">
-		<img id="angie" class="paternal female rela2" title="" src="./assets/angie.png">
-		<img id="dan" class="maternal male rela2" title="" src="./assets/dan.png">
-		<img id="aunt" class="maternal female rela" title="" src="./assets/aunt.png">
-		<img id="cece" class="nuclear female" title="" src="./assets/cece.png">
-		<img id="delaney" class="maternal male rela" title="" src="./assets/delaney.png">
-		<img id="gmm" class="maternal female" title="" src="./assets/gmm.png">
-		<img id="gmp" class="paternal female" title="" src="./assets/gmp.png">
-		<img id="gpm" class="maternal male" title="" src="./assets/gpm.png">
-		<img id="gpp" class="paternal male" title="" src="./assets/gpp.png">
-		<img id="renee" class="paternal female rela" title="" src="./assets/renee.png">
-		<img id="pat" class="maternal male rela" title="" src="./assets/pat.png">
-		<img id="pang" class="paternal female rela" title="" src="./assets/pang.png">
-		<img id="mom" class="maternal female" title="" src="./assets/mom.png">
-		<img id="dad" class="paternal male" title="" src="./assets/dad.png">
-		<img id="me" class="nuclear male" title="" src="./assets/me.png">
-		<img id="wayne" class="paternal male rela" title="" src="./assets/wayne.png">
-		<img id="tony" class="maternal male rela2" title="" src="./assets/dadbro.png">
-
-		<img id="template" src="./assets/concentric.png">
+	<div class="thoughts section">
+		<h1>thoughts</h1>
+		<p><a href="">read</a> about my thoughts on the ethics of ml/ai decisionmaking</p>
 	</div>
-<p id="thoughts">
-	 We begin with a sole image of me, a simple visualization of its own form. In the next stage, we learn a bit more about the members of my family. But in many ways we are still working with a blank slate, where the relationships between these faces is perhaps not obvious to most. But then as we the people begin to organize themselves via the edges of the graph, we see the relatedness of the figures, and begin to understand the nature of Yao images. Hovering over the faces reveals a bit more information about each member of the lineage, a symbol and metaphor for how often family lineages can be judged on appearance when there is always much more to learn about the members of a lineage that is immediately apparent. In the first visualization, the shape resembles an inverted triangle, with my sister and I residing at the apex. This would be a good visual to see from which individuals I inherited my DNA (or blood). This also highlights the principle that spatial location and organization is an essential part of any form of visualization, and influences the way it is perceived. In the next phase, additions are made to the graph. In this case, additional relatives from both my and my parents generation are added. This simple addition changes the perception of the graph dramatically, where it is no longer obvious that I am at the apex, and is serving a different purpose of juxtaposing and comparing the maternal and paternal sides of my family (denoted by the blue and red borders). My sister and I are surrounded by purple borders because we are combinations of our maternal and paternal sides; blue + red = purple. This stage also serves to illustrate the idea that the intentional inclusion or exclusion of particular entities in a lineage diagram is a critical part of the design and affects the message it conveys. In the final stage, I am illustrating how a completely different rendering of the same family images has a drastic effect on its meaning. For example, I am certainly not at the focal point, whereas the oldest generation represented sits in the center of the circles. The concentric circle structure is also able to capture the expansive nature of families in an even greater dimension than a one dimensional tree or lineage diagram. Similarly to Mary Bouqet's exploration of the family tree, this project explores the various imperatives of a few different diagrams. An essential theme is that the way that families are organized is an expression of the cultural and social priorities that prevail in a family, and more broadly in a society. A visualization is not only a representation of how we see things, but how we understand them.
-  </p>
-<!-- <p><a id = "tooltip-2" href = "#" title = "Nice tooltip"> I also have a tooltip</a></p> -->
-
+	<div class="link section">
+		<h1>links</h1>
+		<ul>
+			<li><a href="assets/site-res.pdf">resume</a></li>
+			<li><a href="https://github.com/willyao99">github</a></li>
+			<li><a href="https://www.linkedin.com/in/williamyao99/">linkedin</a></li>
+			<li><a href="https://www.instagram.com/yaosterviolin/?hl=en">instagram</a></li>
+		</ul>
+	</div>
+	<div class="update section"><p>last updated feb 24 twenty-twenty</p></div>
+	
+	
 </body>
-<!-- </html>
+</html>
