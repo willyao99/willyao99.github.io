@@ -13,8 +13,38 @@
 			background-color: #afe8a7;
 			font-family: 'Lato', sans-serif;
 		}
-		footer {
-			width: 100%;
+
+		#top, #bottom, #left, #right {
+			background: #d5caff;
+			position: fixed;
+		}
+
+		#left, #right {
+			top: 0; bottom: 0;
+			width: 15px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+			
+		#top, #bottom {
+			left: 0; right: 0;
+			height: 15px;
+			}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+		.hi {
+			margin: 3% auto;
+		}
+
+		.thoughts {
+			margin: 3% auto;
+		}
+
+		.update {
+			margin: 0 auto;
+			text-align: center;
+			padding-bottom: 5px;
 		}
 
 		.headshot {
@@ -27,43 +57,77 @@
 
 		}
 
-		@media (min-width: 600px) {
-		  .section {
-		    width: 100%;
-		  }
-
 		.section {
 			opacity: 1;
-			width: 40%;
+			width: 50%;
+			/*border: 2px solid red;*/
 		}
 
-		.hi {
-			margin: 3% auto;
-		}
-
-		.thoughts {
-			margin: 3% auto;
-		}
-
-		.link {
-			margin: 5% auto;
-		}
-
-		.update {
+		.link-container {
 			margin: 0 auto;
-			text-align: center;
+			width: 50%;
+			display: grid;
+			grid-template-columns: 50% 50%;
+			padding: 5px;
+			grid-row-gap: 5px;
+			grid-column-gap: 5px;
 		}
+
+		.link-box {
+			text-align: center;
+			padding: 40px;		
+			border: 5px solid #d5caff;	
+			text-decoration: none;
+		}
+		.link-box:hover {
+			background-color: #d5caff;
+		}
+
+		@media (max-width: 850px) {
+			.section {
+				width: 75%;
+			}
+			.link-container {
+				width: 75%;
+			}
+
+		}
+
+		@media (max-width: 650px) {
+		  .section {
+		    width: 100%;
+		    margin-left: 18px;
+		  }
+		  #top, #bottom, #right {
+		  	display: none;
+		  }
+		  .link-container {
+		  	width: 100%;
+		  	grid-template-columns: auto;
+		  	margin-left: 18px;
+		  }
+		  .link-box {
+				padding: 10px;
+			}
+		}
+
 
 	</style>
 	<title>willyao</title>
 </head>
 <body>
+	<!-- body border -->
+	<div id="left"></div>
+	<div id="right"></div>
+	<div id="top"></div>
+	<div id="bottom"></div>
+
 	<img class="headshot" src="assets/headshot.png" alt="Loading Image...">
 	<div class="hi section">
 		<h1>hi | &#20320;&#22909; | bonjour</h1>
 		<div>
 			<p>
-				i'm will yao, a student at harvard studying applied math and computer science. this semester i'm mostly thinking and learning about <a href="https://en.wikipedia.org/wiki/Programming_language_theory">pl theory</a>, <a href="https://en.wikipedia.org/wiki/Game_theory">game theory</a> and <a href="https://en.wikipedia.org/wiki/Machine_learning">ml</a>. i've spent summers working at some tech firms, <a href="https://www.loro.xyz/">small</a> and <a href="https://www.abinitio.com/en/">large</a>. i'm one of the technology chairs of the <a href="https://www.thecrimson.com/">harvard crimson</a>, where i help lead a variety of software projects to improve our website. i'm a native rhode islander, and i'm a lifelong <a href="https://www.brattlestreetchamberplayers.com/">violinist</a>. i'm interested in tech, education, law, music and whatever lies at the intersection of those things. 
+				i'm will yao, a student at harvard studying applied math and computer science. this semester i'm mostly thinking and learning about <a href="https://en.wikipedia.org/wiki/Game_theory"> algo game theory</a> and <a href="https://en.wikipedia.org/wiki/Machine_learning">ml</a>. i've spent summers working at some tech firms, <a href="https://www.loro.xyz/">small</a> and <a href="https://www.abinitio.com/en/">large</a>. i'm one of the technology chairs of the <a href="https://www.thecrimson.com/">harvard crimson</a>, where i help lead a variety of software projects to improve our website. i'm a native rhode islander, and i'm a lifelong <a href="https://www.brattlestreetchamberplayers.com/">violinist</a>. i'm interested in tech, education, law, music and whatever lies at the intersection of those things. 
 			</p>
 			<p>i hope everyone is staying safe and healthy during the time of this outbreak.</p>
 			<p>
@@ -76,17 +140,24 @@
 		<h1>thoughts</h1>
 		<p><a href="assets/Normalized and Normative (site version).pdf">read</a> about my thoughts on the ethics of ml/ai decisionmaking</p>
 	</div>
-	<div class="link section">
-		<h1>links</h1>
-		<ul>
-			<li><a href="assets/site-res.pdf">resume</a></li>
-			<li><a href="https://github.com/willyao99">github</a></li>
-			<li><a href="https://www.linkedin.com/in/williamyao99/">linkedin</a></li>
-			<li><a href="https://www.instagram.com/yaosterviolin/?hl=en">instagram</a></li>
-		</ul>
+
+	<div class="link-container">
+		<a href="assets/site-res.pdf" class="link-box">
+			<h1>resume</h1>
+		</a>
+		<a href="https://github.com/willyao99" class="link-box">
+			<h1>github</h1>
+		</a>
+		<a href="https://www.linkedin.com/in/williamyao99/" class="link-box">
+			<h1>linkedin</h1>
+		</a>
+		<a href="https://www.instagram.com/yaosterviolin/?hl=en" class="link-box">
+			<h1>instagram</h1>
+		</a>
 	</div>
-	<div class="update section"><p>last updated mar 29 twenty-twenty</p></div>
-	
+
+
+	<div class="update section"><p>last updated apr 7 twenty-twenty</p></div>
 	
 </body>
 </html>
